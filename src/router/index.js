@@ -1,14 +1,27 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import VueMaterial from 'vue-material';
+import AppBackend from '../views/AppBackend.vue';
+import AppChecklist from '../views/AppChecklist.vue';
 
+Vue.use(VueMaterial);
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: AppBackend,
+  },
+  {
+    path: '/backend',
+    name: 'Backend',
+    component: AppBackend,
+  },
+  {
+    path: '/checklist',
+    name: 'Checklist',
+    component: AppChecklist,
   },
   {
     path: '/about',
@@ -21,7 +34,9 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
+  mode: 'hash',
+  // base: '/client/',
   base: process.env.BASE_URL,
   routes,
 });

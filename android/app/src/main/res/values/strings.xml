@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">EurobotEnacUI</string>
+    <string name="title_activity_main">EurobotEnacUI</string>
+    <string name="package_name">com.enac.EurobotUI</string>
+    <string name="custom_url_scheme">com.enac.EurobotUI</string>
+</resources>

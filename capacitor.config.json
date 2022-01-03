@@ -1,0 +1,6 @@
+{
+  "appId": "com.enac.EurobotUI",
+  "appName": "EurobotEnacUI",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

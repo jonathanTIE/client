@@ -1,32 +1,37 @@
+<script>
+import AppNav from './components/AppNav.vue';
+import AppBackendHandler from './components/AppBackendHandler.vue';
+
+import 'material-design-icons-iconfont/dist/material-design-icons.css';
+import 'vue-material/dist/vue-material.min.css';
+import 'vue-material/dist/theme/default-dark.css';
+
+export default {
+  name: 'App',
+  components: {
+    AppNav,
+    AppBackendHandler,
+  },
+  data: () => {
+    return {
+      ros_url: 'ws://192.168.1.19:9090',
+    };
+  },
+  methods: {
+    update_ros_url(url) {
+      this.ros_url = url;
+    },
+  },
+};
+</script>
+
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <md-toolbar :md-elevation="3">
+      <AppNav></AppNav>
+    </md-toolbar>
+    <AppBackendHandler v-bind:url="this.ros_url"></AppBackendHandler>
+    <router-view @update-ros-address="update_ros_url"></router-view>
+
   </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
