@@ -1,5 +1,8 @@
 # client
 
+Build version 0.5 -> ROS connection working
+Todo for 0.6 -> Transform ROS backend into a store with vuex, and add components for a basic checklist (left/right, checking if something is on)
+
 ## Project setup
 ```
 npm install
