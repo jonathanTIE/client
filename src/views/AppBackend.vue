@@ -35,9 +35,10 @@ export default {
   emits: ['update-ros-address'],
   data: () => {
     return {
-      ipAddress: '192.168.1.19',
+      ipAddress: 'localhost',
       port: '9090',
       addressOptions: [
+        'localhost',
         '192.168.1.19',
       ],
       portOptions: [

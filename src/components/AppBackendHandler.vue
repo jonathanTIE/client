@@ -64,7 +64,7 @@ export default {
 .md-progress-bar.bar {
   length:80%;
   height:40px;
-  animation: fadeIn 2s infinite alternate;
+  /* animation: fadeIn 2s infinite alternate; */
 }
 #backend-state {
   background-color: var(--color);
