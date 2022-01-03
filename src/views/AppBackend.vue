@@ -51,6 +51,12 @@ export default {
       return `ws://${this.ipAddress}:${this.port}`;
     },
   },
+  mounted() {
+    console.log('aaaa');
+    this.$store.commit('increment');
+    this.$store.commit('increment');
+    console.log(this.$store.state.count);
+  },
 
 };
 </script>
